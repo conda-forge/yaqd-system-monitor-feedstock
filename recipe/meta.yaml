@@ -1,5 +1,5 @@
 {% set name = "yaqd-system-monitor" %}
-{% set version = "2020.7.1" %}
+{% set version = "2020.7.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9fdd6c1f8bec777d35fb2fb3acc1e252009c1e2a59d023283d92a5f56b9cc635
+  sha256: 2be1853dfef68b1ba74c5fd77077f08694fbb41b7271ca1f010628474e9fe49a
 
 build:
   number: 0
@@ -22,14 +22,14 @@ requirements:
     - pip
     - psutil
     - uptime
-    - yaqd-core
+    - yaqd-core >=2020.7.3
     - flit
     - python >=3.7
   run:
     - psutil
     - python >=3.7
     - uptime
-    - yaqd-core
+    - yaqd-core >=2020.7.3
 
 test:
   imports:
