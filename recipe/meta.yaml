@@ -1,5 +1,5 @@
 {% set name = "yaqd-system-monitor" %}
-{% set version = "2020.7.2" %}
+{% set version = "2020.12.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2be1853dfef68b1ba74c5fd77077f08694fbb41b7271ca1f010628474e9fe49a
+  sha256: a4cdafa688102475a066b5d6eccc7716929da6ec7bf8ba68f766d388caa98313
 
 build:
   number: 0
