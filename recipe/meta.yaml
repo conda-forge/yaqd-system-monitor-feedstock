@@ -22,14 +22,14 @@ requirements:
     - pip
     - psutil
     - uptime
-    - yaqd-core >=2020.7.3
+    - yaqd-core >=2021.3.0
     - flit
     - python >=3.7
   run:
     - psutil
     - python >=3.7
     - uptime
-    - yaqd-core >=2020.7.3
+    - yaqd-core >=2021.3.0
 
 test:
   imports:
