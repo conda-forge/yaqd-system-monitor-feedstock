@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 161a44af2249b058fe1c7c6d70bd192bd2bc6d143c9e3e5d6e0b48044de543e6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yaqd-system-monitor = yaqd_system_monitor._system_monitor:SystemMonitor.main
@@ -24,10 +24,10 @@ requirements:
     - uptime
     - yaqd-core >=2021.3.0
     - flit
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - psutil
-    - python >=3.7
+    - python >={{ python_min }}
     - uptime
     - yaqd-core >=2021.3.0
 
@@ -39,6 +39,7 @@ test:
     - yaqd-system-monitor --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://yaq.fyi
